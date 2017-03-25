@@ -1,0 +1,13 @@
+<div>
+	<br>
+	<h2>All news: </h2>
+	<ul class="row">
+		{{#each news}}
+		<li class="col">
+			<!--<label for="id">Unique id: </label><h3 name="id">{{this._id}}</h3>-->
+			<a href="#/posts/{{this._id}}"><img src="{{this.imgUrl}}" alt="image" width="300" height="360"></a>
+			<p>{{this.description}}</p>
+		</li>
+		{{/each}}
+	</ul>
+</div>

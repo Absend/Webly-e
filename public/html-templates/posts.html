@@ -1,0 +1,22 @@
+<div class="news row">
+	<div class="col">
+		<!--<label for="id">Unique id: </label>
+		<h3 name="id">{{news._id}}</h3>-->
+		<img src="{{news.imgUrl}}" alt="" width="300">
+		<p>{{news.description}}</p><br><br>
+	</div>
+	<div class="col">
+		<label for="ul-comments">Comments: </label>
+		<ul name="ul-comments">
+			{{#each news.comments}}
+			<li>{{this.value}} <a href="">{{this.user}}</a></li>
+			{{/each}}
+
+		</ul><br><br> New Comment:
+		<form>
+			<input id="new-comment-input" type="text" name="comment">
+			<a href="#/comment">Submit</a>
+		</form>
+	</div>
+
+</div>
